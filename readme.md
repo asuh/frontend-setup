@@ -10,7 +10,6 @@ TODO -
 - Allow apps downloaded from anywhere system preferences
 - brew install zsh
 - change NVM to wget https://github.com/creationix/nvm
--
 
 This document assumes you're running a fresh copy of **OS X Yosemite**.
 

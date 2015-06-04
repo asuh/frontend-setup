@@ -1,7 +1,7 @@
 # Frontend Development Setup on a Mac
 
 
-TODO - 
+TODO -
 - Update to Yosemite
 - homebrew cask
 - add developer tools experiment flags on chrome chrome://flags
@@ -10,9 +10,9 @@ TODO -
 - Allow apps downloaded from anywhere system preferences
 - brew install zsh
 - change NVM to wget https://github.com/creationix/nvm
-- 
+-
 
-This document assumes you're running a fresh copy of **OS X Mavericks**.
+This document assumes you're running a fresh copy of **OS X Yosemite**.
 
 If you have any comments or suggestions, feel free to give me a shout [on Twitter](https://twitter.com/ppskeet)!
 
@@ -42,22 +42,23 @@ If you have any comments or suggestions, feel free to give me a shout [on Twitte
 
 ## System update
 
-First thing you need to do, on any OS actually, is update the system! For that: **Apple Icon > Software Update**
+Step One - Update the system!
+**Apple Icon > Software Update**
 
-## Reset Modifier Keys
+## (optional) Reset Modifier Keys
 
 Replace your Control Key with the Caps lock key. Caps lock is useless. It's a huge icon, easy for your pinky to hit and it'll make life easier when working with vim. **System Preferences > Search for Reset Modifier Keys**
 
 * Caps Lock = Control
-* Control = No Action 
+* Control = No Action
 ![Reset Modifier Keys](http://i.imgur.com/qEfywWM.png)
 
-## Projects Directory 
+## Projects Directory
 
-Create a project directory somewhere on your machine. I like to use ~/Sites and I'll split that into work/personal/temp. If you fire up terminal **(Command + Spacebar -> Type: Terminal -> Enter)** you will be able to run this command to automatically create those directories for you: 
+Create a project directory somewhere on your machine. I like to use ~/Sites and I'll split that into work/personal/temp. If you fire up terminal **(Command + Spacebar -> Type: Terminal -> Enter)** you will be able to run this command to automatically create those directories for you:
 
 	$ mkdir -p ~/Sites/{personal,tmp,work}
-	
+
 ## Homebrew
 
 Package managers make it so much easier to install and update applications (for Operating Systems) or libraries (for programming languages). The most popular one for OS X is [Homebrew](http://brew.sh/).
@@ -66,13 +67,15 @@ Package managers make it so much easier to install and update applications (for 
 
 An important dependency before Homebrew can work is the **Command Line Tools** for **Xcode**. These include compilers that will allow you to build things from source.
 
-Now, Xcode weights something like 2GB, and you don't need it unless you're developing iPhone or Mac apps. Good news is Apple provides a way to install only the Command Line Tools, without Xcode. To do this you need to go to [http://developer.apple.com/downloads](http://developer.apple.com/downloads), and sign in with your Apple ID (the same one you use for iTunes and app purchases). Unfortunately, you're greeted by a rather annoying questionnaire. All questions are required, so feel free to answer at random.
+Xcode weights something like 2GB and you don't need it unless you're developing iPhone or Mac apps. Good news is Apple provides a way to install only the Command Line Tools, without Xcode.
 
-Once you reach the downloads page, search for "command line tools", and download the latest **Command Line Tools (OS X Mountain Lion) for Xcode**. Open the **.dmg** file once it's done downloading, and double-click on the **.mpkg** installer to launch the installation. When it's done, you can unmount the disk in Finder.
+Install the Xcode Command Line Tools directly from the command line with `$ xcode-select --install`.
 
-**Note**: If you are running **OS X 10.9 Mavericks**, then you can install the Xcode Command Line Tools directly from the command line with `$ xcode-select --install`, and you don't have to go through the download page and the questionnaire.
+For older OSes, go to [http://developer.apple.com/downloads](http://developer.apple.com/downloads), and sign in with your Apple ID (the same one you use for iTunes and app purchases).
 
-Finally, we can install Hombrew! In the terminal paste the following line (without the `$`), hit **Enter**, and follow the steps on the screen:
+Once you reach the downloads page, search for "command line tools", and download **Command Line Tools for Xcode**. Open the **.dmg** file once it's done downloading, and double-click on the **.mpkg** installer to launch the installation. When it's done, you can unmount the disk in Finder.
+
+Finally, we can install Homebrew! In terminal paste the following line (without `$`), hit **Enter**, and follow the steps on the screen:
 
     $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
@@ -83,18 +86,20 @@ One thing we need to do is tell the system to use programs installed by Hombrew 
 Open an new terminal tab with **Cmd+T** (you should also close the old one), then run the following command to make sure everything works:
 
     $ brew doctor
-    
+
 ### Usage
 
 To install a package (or **Formula** in Homebrew vocabulary) simply type:
 
     $ brew install <formula>
-        
+
+Replace `<forumla>` with the name of the formula you want to install.
+
 To update Homebrew's directory of formulae, run:
 
     $ brew update
-    
-**Note**: I've seen that command fail sometimes because of a bug. If that ever happens, run the following (when you have Git installed):
+
+**Note**: I've seen `brew update` fail sometimes because of a bug. If that ever happens, run the following (when you [have Git installed](#git)):
 
 ```bash
 $ cd /usr/local
@@ -105,11 +110,11 @@ $ git reset --hard origin/master
 To see if any of your packages need to be updated:
 
     $ brew outdated
-    
+
 To update a package:
 
     $ brew upgrade <formula>
-        
+
 Homebrew keeps older versions of packages installed, in case you want to roll back. That rarely is necessary, so you can do some cleanup to get rid of those old versions:
 
     $ brew cleanup
@@ -117,22 +122,22 @@ Homebrew keeps older versions of packages installed, in case you want to roll ba
 To see what you have installed (with their version numbers):
 
     $ brew list --versions
-    
+
 ##NVM
 brew install nvm
 add this to .zshrc
 
- export NVM_DIR=~/.nvm 
+ export NVM_DIR=~/.nvm
  source $(brew --prefix nvm)/nvm.sh
-    
+
 ##Ruby and RBEnv
 
-Ruby does come pre-installed on Mac, but you probably shouldn't be tinkering around with that version. It's best to install a ruby version manager to take care of anything that one might screw up messing around with your system's version of Ruby. Now that we have Homebrew installed, it's as easy as: 
+Ruby does come pre-installed on Mac, but you probably shouldn't be tinkering around with that version. It's best to install a ruby version manager to take care of anything that one might screw up messing around with your system's version of Ruby. Now that we have Homebrew installed, it's as easy as:
 
 	$ brew update
 	$ brew install rbenv ruby-build
 	$ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
-	
+
 3. Add `rbenv init` to your shell to enable shims and autocompletion.
 
     ~~~ sh
@@ -148,7 +153,7 @@ Ruby does come pre-installed on Mac, but you probably shouldn't be tinkering aro
     $ type rbenv
     #=> "rbenv is a function"
     ~~~
-    
+
 ## Homebrew Cask
 
 brew install caskroom/cask/brew-cask
@@ -159,7 +164,7 @@ https://github.com/salomvary/soundcleod
 
 ##Maximum Awesome
 
-I originally intended to write my own build script for a lot of this, but Maximum Awesome already does a fantastic job installing iTerm2, Tmux, MacVim and a plethora of other great features! 
+I originally intended to write my own build script for a lot of this, but Maximum Awesome already does a fantastic job installing iTerm2, Tmux, MacVim and a plethora of other great features!
 
 [https://github.com/square/maximum-awesome](https://github.com/square/maximum-awesome)
 
@@ -178,7 +183,7 @@ Download: [http://google.com/chrome](https://www.google.com/intl/en/chrome/brows
 ## Google Chrome Canary
 
 	$ brew cask install google-chrome-canary
-  
+
 
 ## Consolas
 
@@ -204,11 +209,11 @@ And click **Install Font**. Thanks to Alexander Zhuravlev for his [post](http://
 What's a developer without [Git](http://git-scm.com/)? To install, simply run:
 
     $ brew install git
-    
+
 When done, to test that it installed fine you can run:
 
     $ git --version
-    
+
 And `$ which git` should output `/usr/local/bin/git`.
 
 Let's set up some basic configuration. Download the [.gitconfig](/nicolahery/mac-dev-setup/blob/master/.gitconfig) file to your home directory:
@@ -228,9 +233,9 @@ They will get added to your `.gitconfig` file.
 To push code to your GitHub repositories, we're going to use the recommended HTTPS method (versus SSH). So you don't have to type your username and password everytime, let's enable Git password caching as described [here](https://help.github.com/articles/set-up-git):
 
     $ git config --global credential.helper osxkeychain
-    
+
 **Note**: On a Mac, it is important to remember to add `.DS_Store` (a hidden OS X system file that's put in folders) to your `.gitignore` files. You can take a look at this repository's [.gitignore](/nicolahery/mac-dev-setup/blob/master/.gitignore) file for inspiration.
-    
+
 ## Sublime Text
 
 With the terminal, the text editor is a developer's most important tool. Everyone has their preferences, but unless you're a hardcore [Vim](http://en.wikipedia.org/wiki/Vim_(text_editor)) user, a lot of people are going to tell you that [Sublime Text](http://www.sublimetext.com/) is currently the best one out there.
@@ -260,7 +265,7 @@ Just like the terminal, let's configure our editor a little. Go to **Sublime Tex
     "indent_to_bracket": true
 }
 ```
-    
+
 Feel free to tweak these to your preference. When done, save the file and close it.
 
 I use tab size 2 for everything except Python and Markdown files, where I use tab size 4. If you have a Python and Markdown file handy (or create dummy ones with `$ touch dummy.py`), for each one, open it and go to **Sublime Text 2 > Preferences > Settings - More > Syntax Specific - User** to paste in:
@@ -277,7 +282,7 @@ A popular Theme is the [Soda Theme](https://github.com/buymeasoda/soda-theme). T
 
     $ cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/
     $ git clone https://github.com/buymeasoda/soda-theme/ "Theme - Soda"
-    
+
 Then go to **Sublime Text 2 > Preferences > Settings - User** and add the following two lines:
 
     "theme": "Soda Dark.sublime-theme",
@@ -312,7 +317,7 @@ Although Sublime Text will be our main editor, it is a good idea to learn some v
 
 For example, when you run a Git commit, it will open Vim to allow you to type the commit message.
 
-I suggest you read a tutorial on Vim. Grasping the concept of the two "modes" of the editor, **Insert** (by pressing `i`) and **Normal** (by pressing `Esc` to exit Insert mode), will be the part that feels most unatural. After that it's just remembering a few important keys.
+I suggest you read a tutorial on Vim. Grasping the concept of the two "modes" of the editor, **Insert** (by pressing `i`) and **Normal** (by pressing `Esc` to exit Insert mode), will be the part that feels most unnatural. After that it's just remembering a few important keys.
 
 Vim's default settings aren't great, and you could spend a lot of time tweaking your configuration (the `.vimrc` file). But if you're like me and just use Vim occasionally, you'll be happy to know that [Tim Pope](https://github.com/tpope) has put together some sensible defaults to quickly get started.
 
@@ -341,7 +346,7 @@ Install [Node.js](http://nodejs.org/) with Homebrew:
 
     $ brew update
     $ brew install node
-    
+
 The formula also installs the [npm](https://npmjs.org/) package manager. However, as suggested by the Homebrew output, we need to add `/usr/local/share/npm/bin` to our path so that npm-installed modules with executables will have them picked up.
 
 To do so, add this line to your `~/.path` file, before the `export PATH` line:
@@ -349,7 +354,7 @@ To do so, add this line to your `~/.path` file, before the `export PATH` line:
 ```bash
 PATH=/usr/local/share/npm/bin:$PATH
 ```
-        
+
 Open a new terminal for the `$PATH` changes to take effect.
 
 We also need to tell npm where to find the Xcode Command Line Tools, by running:
@@ -398,11 +403,11 @@ To uninstall a package:
 Assuming that you have an account (sign up if you don't), let's install the [Heroku Client](https://devcenter.heroku.com/articles/using-the-cli) for the command-line. Heroku offers a Mac OS X installer, the [Heroku Toolbelt](https://toolbelt.heroku.com/), that includes the client. But for these kind of tools, I prefer using Homebrew. It allows us to keep better track of what we have installed. Luckily for us, Homebrew includes a `heroku-toolbelt` formula:
 
     $ brew install heroku-toolbelt
-    
+
 The formula might not have the latest version of the Heroku Client, which is updated pretty often. Let's update it now:
 
     $ heroku update
-    
+
 Don't be afraid to run `heroku update` every now and then to always have the most recent version.
 
 ### Usage
@@ -410,18 +415,18 @@ Don't be afraid to run `heroku update` every now and then to always have the mos
 Login to your Heroku account using your email and password:
 
     $ heroku login
-    
+
 If this is a new account, and since you don't already have a public **SSH key** in your `~/.ssh` directory, it will offer to create one for you. Say yes! It will also upload the key to your Heroku account, which will allow you to deploy apps from this computer.
 
 If it didn't offer create the SSH key for you (i.e. your Heroku account already has SSH keys associated with it), you can do so manually by running:
 
      $ mkdir ~/.ssh
      $ ssh-keygen -t rsa
-     
+
 Keep the default file name and skip the passphrase by just hitting Enter both times. Then, add the key to your Heroku account:
 
     $ heroku keys:add
-    
+
 Once the key business is done, you're ready to deploy apps! Heroku has a great [Getting Started](https://devcenter.heroku.com/articles/python) guide, so I'll let you refer to that (the one linked here is for Python, but there is one for every popular language). Heroku uses Git to push code for deployment, so make sure your app is under Git version control. A quick cheat sheet (if you've used Heroku before):
 
     $ cd myapp/
@@ -429,7 +434,7 @@ Once the key business is done, you're ready to deploy apps! Heroku has a great [
     $ git push heroku master
     $ heroku ps
     $ heroku logs -t
-    
+
 The [Heroku Dev Center](https://devcenter.heroku.com/) is full of great resources, so be sure to check it out!
 
 ## MongoDB
@@ -464,7 +469,7 @@ This really depends on how you want to organize your files, but I like to put al
 Here is a quick list of some apps I use, and that you might find useful as well:
 
 - [Mou](http://markedapp.com/): As a developer, most of the stuff you write ends up being in [Markdown](http://daringfireball.net/projects/markdown/). In fact, this `README.md` file (possibly the most important file of a GitHub repo) is indeed in Markdown, written in Sublime Text, and I use Marked to preview the results everytime I save. **(FREE)**
-- [Alfred](#alfred)
+- [Alfred](http://www.alfredapp.com/): If you find Yosemite's Spotlight to be limited in functionality, try Alfred. It has a healthy community and lots of plugins.
 - [Evernote](https://evernote.com/): If I don't write something down, I'll forget it. As a developer, you learn so many new things every day, and technology keeps changing, it would be insane to want to keep it all in your head. So take notes, sync them to the cloud, and have them on all your devices. To be honest, I switched to [Simplenote](http://simplenote.com/) because I only take text notes, and I got tired of Evernote putting extra spaces between paragraphs when I copy & pasted into other applications. Simplenote is so much better for text notes (and it supports Markdown!). **(Both are free)**
 
 

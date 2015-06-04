@@ -2,7 +2,6 @@
 
 
 TODO -
-- Update to Yosemite
 - homebrew cask
 - add developer tools experiment flags on chrome chrome://flags
 - look over rbenv https://github.com/sstephenson/rbenv

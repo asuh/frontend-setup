@@ -151,6 +151,12 @@ You should get `ruby 2.2.0` or higher.
 
 You should get `Rails 4.2.0` or higher.
 
+## Sass
+
+Install your preprocessor of choice, but I highly recommend using Sass. They all do the same thing but Sass has the most momentum behind it right now.
+
+    $ sudo gem install sass
+
 ## Homebrew Cask
 
 Homebrew Cask extends Homebrew to let you install OS X applications and large binaries alike. Use it to install browsers and editors!
@@ -352,9 +358,21 @@ To uninstall a package:
 
     $ npm uninstall <package>
 
-## Sass
+### Preprocessor and Postprocessor
 
-## Yeoman, Bower, and Grunt
+Previously, I had you install Sass. In case you're not a fan of Sass or prefer another type of processor, here are
+
+In case you like Less:
+
+    $ npm install -g less
+
+CSS Next is the future wave of CSS processing, allowing you to write cutting edge styles from tomorrow's language:
+
+    $ npm install cssnext
+
+### Yeoman, Bower, and Grunt
+
+    $npm install yeoman
 
 ## Heroku
 

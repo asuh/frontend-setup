@@ -15,7 +15,7 @@ This document assumes you're running a fresh copy of **OS X Yosemite**.
 If you have any comments or suggestions, feel free to give me a shout [on Twitter](https://twitter.com/ppskeet)!
 
 - [System update](#system-update)
-- [Reset Modifier Keys](#reset-modifier-keys)
+- [Reset Modifier Keys](#reset-modifier-keys-optional)
 - [Xcode Command Line Tools](#xcode-command-line-tools)
 - [Homebrew](#homebrew)
 - [Homebrew Cask](#homebrew-cask)

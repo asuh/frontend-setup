@@ -2,7 +2,7 @@
 
 This document assumes you're running a fresh copy of **OS X Yosemite**.
 
-If you have any comments or suggestions, feel free to give me a shout [on Twitter](https://twitter.com/ppskeet)!
+If you have any comments or suggestions, feel free to give me a shout [on Twitter](https://twitter.com/asuh)!
 
 - [System update](#system-update)
 - [Reset Modifier Keys](#reset-modifier-keys-optional)
@@ -14,16 +14,15 @@ If you have any comments or suggestions, feel free to give me a shout [on Twitte
 - [Google Chrome](#google-chrome)
 - [Google Chrome Canary](#google-chrome-canary)
 - [Firefox](#firefox)
-- [Slate](#https://github.com/jigish/slate)
-- [VirtualBox](#virtualbox)
-- [Sublime Text](#sublime-text)
-- [Git](#git)
 - [Sublime Text](#sublime-text)
 - [Vim](#vim)
+- [Slate](#https://github.com/jigish/slate)
+- [VirtualBox](#virtualbox)
+- [Vagrant](#vagrant)
+- [Git](#git)
 - [Node.js](#nodejs)
-- [Yeoman](#yeoman)
-- [Bower](#bower)
-- [Grunt](#grunt)
+- [Sass](#sass)
+- [Yeoman, Bower, and Grunt](#yeoman-bower-and-grunt)
 - [Heroku](#heroku)
 - [MongoDB](#mongodb)
 - [Projects folder](#projects-folder)
@@ -183,57 +182,6 @@ Download: [http://google.com/chrome](https://www.google.com/intl/en/chrome/brows
 	$ brew cask install google-chrome-canary
 
 
-## Consolas
-
-I really like the Consolas font for coding. Being a Microsoft (!) font, it is not installed by default. Since we're going to be looking at a lot of terminal output and code, let's install it now.
-
-There are two ways we can install it. If you bought **Microsoft Office for Mac**, install that and Consolas will be installed as well.
-
-If you don't have Office, follow these steps:
-
-    $ brew install cabextract
-    $ cd ~/Downloads
-    $ mkdir consolas
-    $ cd consolas
-    $ curl -O http://download.microsoft.com/download/f/5/a/f5a3df76-d856-4a61-a6bd-722f52a5be26/PowerPointViewer.exe
-    $ cabextract PowerPointViewer.exe
-    $ cabextract ppviewer.cab
-    $ open CONSOLA*.TTF
-
-And click **Install Font**. Thanks to Alexander Zhuravlev for his [post](http://blog.ikato.com/post/15675823000/how-to-install-consolas-font-on-mac-os-x).
-
-## Git
-
-What's a developer without [Git](http://git-scm.com/)? To install, simply run:
-
-    $ brew install git
-
-When done, to test that it installed fine you can run:
-
-    $ git --version
-
-And `$ which git` should output `/usr/local/bin/git`.
-
-Let's set up some basic configuration. Download the [.gitconfig](/nicolahery/mac-dev-setup/blob/master/.gitconfig) file to your home directory:
-
-    $ cd ~
-    $ curl -O https://raw.github.com/nicolashery/mac-dev-setup/master/.gitconfig
-
-It will add some color to the `status`, `branch`, and `diff` Git commands, as well as a couple aliases. Feel free to take a look at the contents of the file, and add to it to your liking.
-
-Next, we'll define your Git user (should be the same name and email you use for [GitHub](https://github.com/) and [Heroku](http://www.heroku.com/)):
-
-    $ git config --global user.name "Your Name Here"
-    $ git config --global user.email "your_email@youremail.com"
-
-They will get added to your `.gitconfig` file.
-
-To push code to your GitHub repositories, we're going to use the recommended HTTPS method (versus SSH). So you don't have to type your username and password everytime, let's enable Git password caching as described [here](https://help.github.com/articles/set-up-git):
-
-    $ git config --global credential.helper osxkeychain
-
-**Note**: On a Mac, it is important to remember to add `.DS_Store` (a hidden OS X system file that's put in folders) to your `.gitignore` files. You can take a look at this repository's [.gitignore](/nicolahery/mac-dev-setup/blob/master/.gitignore) file for inspiration.
-
 ## Sublime Text
 
 With the terminal, the text editor is a developer's most important tool. Everyone has their preferences, but unless you're a hardcore [Vim](http://en.wikipedia.org/wiki/Vim_(text_editor)) user, a lot of people are going to tell you that [Sublime Text](http://www.sublimetext.com/) is currently the best one out there.
@@ -338,6 +286,38 @@ And finally, install the Vim "sensible defaults" by running:
 
 With that, Vim will look a lot better next time you open it!
 
+## Git
+
+What's a developer without [Git](http://git-scm.com/)? To install, simply run:
+
+    $ brew install git
+
+When done, to test that it installed fine you can run:
+
+    $ git --version
+
+And `$ which git` should output `/usr/local/bin/git`.
+
+Let's set up some basic configuration. Download the [.gitconfig](/nicolahery/mac-dev-setup/blob/master/.gitconfig) file to your home directory:
+
+    $ cd ~
+    $ curl -O https://raw.github.com/nicolashery/mac-dev-setup/master/.gitconfig
+
+It will add some color to the `status`, `branch`, and `diff` Git commands, as well as a couple aliases. Feel free to take a look at the contents of the file, and add to it to your liking.
+
+Next, we'll define your Git user (should be the same name and email you use for [GitHub](https://github.com/) and [Heroku](http://www.heroku.com/)):
+
+    $ git config --global user.name "Your Name Here"
+    $ git config --global user.email "your_email@youremail.com"
+
+They will get added to your `.gitconfig` file.
+
+To push code to your GitHub repositories, we're going to use the recommended HTTPS method (versus SSH). So you don't have to type your username and password everytime, let's enable Git password caching as described [here](https://help.github.com/articles/set-up-git):
+
+    $ git config --global credential.helper osxkeychain
+
+**Note**: On a Mac, it is important to remember to add `.DS_Store` (a hidden OS X system file that's put in folders) to your `.gitignore` files. You can take a look at this repository's [.gitignore](/nicolahery/mac-dev-setup/blob/master/.gitignore) file for inspiration.
+
 ## Node.js
 
 Install [Node.js](http://nodejs.org/) with Homebrew:
@@ -391,6 +371,10 @@ To upgrade all or a particular package:
 To uninstall a package:
 
     $ npm uninstall <package>
+
+## Sass
+
+## Yeoman, Bower, and Grunt
 
 ## Heroku
 

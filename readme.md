@@ -55,7 +55,8 @@ An important dependency before Homebrew can work is the **Command Line Tools** f
 Xcode weighs something ~2GB and is useful for the iOS simulator but is not necessary unless you're developing iOS or Mac apps. Good news is Apple provides a way to install only the Command Line Tools, without Xcode.
 
 Using Terminal, install the Xcode Command Line Tools:
-    `gcc` (or `$ xcode-select --install`)
+
+    $ `gcc` (or `$ xcode-select --install`)
 
 For older OSes, go to [http://developer.apple.com/downloads](http://developer.apple.com/downloads), and sign in with your Apple ID (the same one you use for iTunes and app purchases).
 

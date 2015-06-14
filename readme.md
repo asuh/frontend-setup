@@ -16,6 +16,7 @@ If you have any comments or suggestions, feel free to give me a shout [on Twitte
 
 - [System update](#system-update)
 - [Reset Modifier Keys](#reset-modifier-keys)
+- [Xcode Command Line Tools](#xcode)
 - [Homebrew](#homebrew)
 - [Homebrew Cask](#homebrew-cask)
 - [Maximum Awesome](#maximum-awesome)
@@ -57,21 +58,24 @@ Create a project directory somewhere on your machine. I like to use ~/Sites and 
 
 	$ mkdir -p ~/Sites/{personal,tmp,work}
 
+## Xcode Command Line Tools
+
+An important dependency before Homebrew can work is the **Command Line Tools** for **Xcode**. These include compilers that will allow you to build things from source.
+
+Xcode weighs something ~2GB and is useful for the iOS simulator but is not necessary unless you're developing iOS or Mac apps. Good news is Apple provides a way to install only the Command Line Tools, without Xcode.
+
+Using Terminal, install the Xcode Command Line Tools:
+`gcc` (or `$ xcode-select --install`)
+
+For older OSes, go to [http://developer.apple.com/downloads](http://developer.apple.com/downloads), and sign in with your Apple ID (the same one you use for iTunes and app purchases).
+
+Once you reach the downloads page, search for "command line tools", and download **Command Line Tools for Xcode**. Open the **.dmg** file once it's done downloading, and double-click on the **.mpkg** installer to launch the installation. When it's done, you can unmount the disk in Finder.
+
 ## Homebrew
 
 Package managers make it so much easier to install and update applications (for Operating Systems) or libraries (for programming languages). The most popular one for OS X is [Homebrew](http://brew.sh/).
 
 ### Install
-
-An important dependency before Homebrew can work is the **Command Line Tools** for **Xcode**. These include compilers that will allow you to build things from source.
-
-Xcode weights something like 2GB and you don't need it unless you're developing iPhone or Mac apps. Good news is Apple provides a way to install only the Command Line Tools, without Xcode.
-
-Install the Xcode Command Line Tools directly from the command line with `$ xcode-select --install`.
-
-For older OSes, go to [http://developer.apple.com/downloads](http://developer.apple.com/downloads), and sign in with your Apple ID (the same one you use for iTunes and app purchases).
-
-Once you reach the downloads page, search for "command line tools", and download **Command Line Tools for Xcode**. Open the **.dmg** file once it's done downloading, and double-click on the **.mpkg** installer to launch the installation. When it's done, you can unmount the disk in Finder.
 
 Finally, we can install Homebrew! In terminal paste the following line (without `$`), hit **Enter**, and follow the steps on the screen:
 

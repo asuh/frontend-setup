@@ -161,13 +161,6 @@ You should get `ruby 2.2.0` or higher.
 
 You should get `Rails 4.2.0` or higher.
 
-##NVM
-brew install nvm
-add this to .zshrc
-
- export NVM_DIR=~/.nvm
- source $(brew --prefix nvm)/nvm.sh
-
 ## Homebrew Cask
 
 brew install caskroom/cask/brew-cask

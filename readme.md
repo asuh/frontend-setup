@@ -16,7 +16,7 @@ If you have any comments or suggestions, feel free to give me a shout [on Twitte
 
 - [System update](#system-update)
 - [Reset Modifier Keys](#reset-modifier-keys)
-- [Xcode Command Line Tools](#xcode)
+- [Xcode Command Line Tools](#xcode-command-line-tools)
 - [Homebrew](#homebrew)
 - [Homebrew Cask](#homebrew-cask)
 - [Maximum Awesome](#maximum-awesome)
@@ -44,7 +44,7 @@ If you have any comments or suggestions, feel free to give me a shout [on Twitte
 Step One - Update the system!
 **Apple Icon > Software Update**
 
-## (optional) Reset Modifier Keys
+## Reset Modifier Keys (optional)
 
 Replace your Control Key with the Caps lock key. Caps lock is useless. It's a huge icon, easy for your pinky to hit and it'll make life easier when working with vim. **System Preferences > Search for Reset Modifier Keys**
 

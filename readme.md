@@ -56,7 +56,7 @@ Xcode weighs something ~2GB and is useful for the iOS simulator but is not neces
 
 Using Terminal, install the Xcode Command Line Tools:
 
-    $ xcode-select --install`
+    $ xcode-select --install
 
 For older OSes, go to [http://developer.apple.com/downloads](http://developer.apple.com/downloads), and sign in with your Apple ID (the same one you use for iTunes and app purchases).
 

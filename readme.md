@@ -18,6 +18,7 @@ If you have any comments or suggestions, feel free to give me a shout [on Twitte
 - [Reset Modifier Keys](#reset-modifier-keys-optional)
 - [Xcode Command Line Tools](#xcode-command-line-tools)
 - [Homebrew](#homebrew)
+- [RVM & Ruby](#rvm-and-ruby)
 - [Homebrew Cask](#homebrew-cask)
 - [Maximum Awesome](#maximum-awesome)
 - [Google Chrome](#google-chrome)
@@ -26,7 +27,6 @@ If you have any comments or suggestions, feel free to give me a shout [on Twitte
 - [Slate](#https://github.com/jigish/slate)
 - [VirtualBox](#virtualbox)
 - [Sublime Text](#sublime-text)
-- [Ruby & Rbenv](#ruby)
 - [Git](#git)
 - [Sublime Text](#sublime-text)
 - [Vim](#vim)
@@ -65,7 +65,7 @@ An important dependency before Homebrew can work is the **Command Line Tools** f
 Xcode weighs something ~2GB and is useful for the iOS simulator but is not necessary unless you're developing iOS or Mac apps. Good news is Apple provides a way to install only the Command Line Tools, without Xcode.
 
 Using Terminal, install the Xcode Command Line Tools:
-`gcc` (or `$ xcode-select --install`)
+    `gcc` (or `$ xcode-select --install`)
 
 For older OSes, go to [http://developer.apple.com/downloads](http://developer.apple.com/downloads), and sign in with your Apple ID (the same one you use for iTunes and app purchases).
 
@@ -125,36 +125,48 @@ To see what you have installed (with their version numbers):
 
     $ brew list --versions
 
+## RVM and Ruby
+
+Ruby does come pre-installed on Mac, but you probably shouldn't be tinkering around with that version. It's best to install a ruby version manager to take care of anything that one might screw up messing around with your system's version of Ruby.
+
+[RVM](https://rvm.io) stands for Ruby Version Manager and is a recommended program to use to install and manage different Ruby versions.
+
+(Optional) If you plan on installing Rails, I first recommend disabling documentation. RVM installs documentation for every gem that Rails depends on and will slow down installation.
+
+    echo "gem: --no-document" >> ~/.gemrc
+
+Installing RVM, Ruby and Rails can be done with just one command! If you don't plan to use Rails, you can replace `--rails` with `--ruby` in the command below:
+
+    $ curl -L https://get.rvm.io | bash -s stable --auto-dotfiles --autolibs=enable --rails
+
+For more installation options, see the [RVM documentation](https://github.com/wayneeseguin/rvm#installation).
+
+After it's done, quit and relaunch Terminal, then run this command:
+
+    $ rvm | head -1
+
+If you get rvm is a function, that means RVM was successfully installed. If not, go to the Troubleshooting section.
+
+To make sure the latest versions of RVM, Ruby and Rails were installed, run the commands below:
+
+    $ rvm -v
+
+You should get `rvm 1.26.10` or higher.
+
+    $ ruby -v
+
+You should get `ruby 2.2.0` or higher.
+
+    $ rails -v
+
+You should get `Rails 4.2.0` or higher.
+
 ##NVM
 brew install nvm
 add this to .zshrc
 
  export NVM_DIR=~/.nvm
  source $(brew --prefix nvm)/nvm.sh
-
-##Ruby and RBEnv
-
-Ruby does come pre-installed on Mac, but you probably shouldn't be tinkering around with that version. It's best to install a ruby version manager to take care of anything that one might screw up messing around with your system's version of Ruby. Now that we have Homebrew installed, it's as easy as:
-
-	$ brew update
-	$ brew install rbenv ruby-build
-	$ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
-
-3. Add `rbenv init` to your shell to enable shims and autocompletion.
-
-    ~~~ sh
-    $ echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
-    ~~~
-
-    _Same as in previous step, use `~/.bashrc` on Ubuntu, or `~/.zshrc` for Zsh._
-
-4. Restart your shell so that PATH changes take effect. (Opening a new
-   terminal tab will usually do it.) Now check if rbenv was set up:
-
-    ~~~ sh
-    $ type rbenv
-    #=> "rbenv is a function"
-    ~~~
 
 ## Homebrew Cask
 

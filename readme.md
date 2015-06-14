@@ -10,10 +10,10 @@ If you have any comments or suggestions, feel free to give me a shout [on Twitte
 - [Homebrew](#homebrew)
 - [RVM & Ruby](#rvm-and-ruby)
 - [Homebrew Cask](#homebrew-cask)
-- [Maximum Awesome](#maximum-awesome)
 - [Google Chrome](#google-chrome)
 - [Google Chrome Canary](#google-chrome-canary)
 - [Firefox](#firefox)
+- [Maximum Awesome](#maximum-awesome)
 - [Sublime Text](#sublime-text)
 - [Vim](#vim)
 - [Slate](#https://github.com/jigish/slate)
@@ -153,8 +153,20 @@ You should get `Rails 4.2.0` or higher.
 
 ## Homebrew Cask
 
-brew install caskroom/cask/brew-cask
-brew cask install google-chrome
+    brew install caskroom/cask/brew-cask
+
+### [Google Chrome](http://google.com/chrome)
+
+    $ brew cask install google-chrome
+
+### [Google Chrome Canary](https://www.google.com/chrome/browser/canary.html)
+
+    $ brew cask install google-chrome-canary
+
+### [Firefox](https://www.mozilla.org/en-US/firefox/new/)
+
+    $ brew cask install firefox
+
 
 ## SoundCleod
 https://github.com/salomvary/soundcleod
@@ -171,56 +183,22 @@ I originally intended to write my own build script for a lot of this, but Maximu
 
 ![Maximum Awesome](http://corner.squareup.com/images/maximum-awesome/vim.png)
 
-## Google Chrome
-
-Download: [http://google.com/chrome](https://www.google.com/intl/en/chrome/browser/).
-
-	$ brew cask install google-chrome
-
-## Google Chrome Canary
-
-	$ brew cask install google-chrome-canary
-
 
 ## Sublime Text
 
 With the terminal, the text editor is a developer's most important tool. Everyone has their preferences, but unless you're a hardcore [Vim](http://en.wikipedia.org/wiki/Vim_(text_editor)) user, a lot of people are going to tell you that [Sublime Text](http://www.sublimetext.com/) is currently the best one out there.
 
+    $ brew cask install sublime-text
+
 Go ahead and [download](http://www.sublimetext.com/) it. Open the **.dmg** file, drag-and-drop in the **Applications** folder, you know the drill now. Launch the application.
 
-**Note**: At this point I'm going to create a shorcut on the OS X Dock for both for Sublime Text and iTerm. To do so, right-click on the running application and select **Options > Keep in Dock**.
+**Note**: At this point I'm going to create a shortcut on the OS X Dock for both for Sublime Text and iTerm. To do so, right-click on the running application and select **Options > Keep in Dock**.
 
-Sublime Text is not free, but I think it has an unlimited "evaluation period". Anyhow, we're going to be using it so much that even the seemingly expensive $60 price tag is worth every penny. If you can afford it, I suggest you [support](http://www.sublimetext.com/buy) this awesome tool. :)
+Sublime Text is not free, but I think it has an unlimited "evaluation period". Anyhow, we're going to be using it so much that even the seemingly expensive $70 price tag is worth every penny. If you can afford it, I suggest you [support](http://www.sublimetext.com/buy) this awesome tool. :)
 
-Just like the terminal, let's configure our editor a little. Go to **Sublime Text 2 > Preferences > Settings - User** and paste the following in the file that just opened:
-
-```json
-{
-    "font_face": "Consolas",
-    "font_size": 13,
-    "rulers":
-    [
-        79
-    ],
-    "highlight_line": true,
-    "bold_folder_labels": true,
-    "highlight_modified_tabs": true,
-    "tab_size": 2,
-    "translate_tabs_to_spaces": true,
-    "word_wrap": false,
-    "indent_to_bracket": true
-}
-```
+Just like the terminal, let's configure our editor a little. Go to **Sublime Text 2 > Preferences > Settings - User** and paste this code from [my Preferences.sublime-settings file](https://gist.github.com/asuh/67586e056eba7757330f).
 
 Feel free to tweak these to your preference. When done, save the file and close it.
-
-I use tab size 2 for everything except Python and Markdown files, where I use tab size 4. If you have a Python and Markdown file handy (or create dummy ones with `$ touch dummy.py`), for each one, open it and go to **Sublime Text 2 > Preferences > Settings - More > Syntax Specific - User** to paste in:
-
-```json
-{
-    "tab_size": 4
-}
-```
 
 Now for the color. I'm going to change two things: the **Theme** (which is how the tabs, the file explorer on the left, etc. look) and the **Color Scheme** (the colors of the code). Again, feel free to pick different ones, or stick with the default.
 

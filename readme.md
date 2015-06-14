@@ -1,13 +1,5 @@
 # Frontend Development Setup on a Mac
 
-
-TODO -
-- homebrew cask
-- look over rbenv https://github.com/sstephenson/rbenv
-- enable blackboxing [ manage framework blackboxing on chrome]
-- Allow apps downloaded from anywhere system preferences
-- brew install zsh
-
 This document assumes you're running a fresh copy of **OS X Yosemite**.
 
 If you have any comments or suggestions, feel free to give me a shout [on Twitter](https://twitter.com/ppskeet)!
@@ -477,6 +469,12 @@ Here is a quick list of some apps I use, and that you might find useful as well:
 - [Alfred](http://www.alfredapp.com/): If you find Yosemite's Spotlight to be limited in functionality, try Alfred. It has a healthy community and lots of plugins.
 - [Evernote](https://evernote.com/): If I don't write something down, I'll forget it. As a developer, you learn so many new things every day, and technology keeps changing, it would be insane to want to keep it all in your head. So take notes, sync them to the cloud, and have them on all your devices. To be honest, I switched to [Simplenote](http://simplenote.com/) because I only take text notes, and I got tired of Evernote putting extra spaces between paragraphs when I copy & pasted into other applications. Simplenote is so much better for text notes (and it supports Markdown!). **(Both are free)**
 
+## TODO
+- homebrew cask
+- look over rbenv https://github.com/sstephenson/rbenv
+- enable blackboxing [ manage framework blackboxing on chrome]
+- Allow apps downloaded from anywhere system preferences
+- brew install zsh
 
 ## Credits
 

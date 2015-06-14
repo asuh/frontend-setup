@@ -153,6 +153,8 @@ You should get `Rails 4.2.0` or higher.
 
 ## Homebrew Cask
 
+Homebrew Cask extends Homebrew to let you install OS X applications and large binaries alike. Use it to install browsers and editors!
+
     brew install caskroom/cask/brew-cask
 
 ### [Google Chrome](http://google.com/chrome)

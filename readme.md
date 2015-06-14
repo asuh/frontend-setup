@@ -77,7 +77,7 @@ Package managers make it so much easier to install and update applications (for 
 
 ### Install
 
-Finally, we can install Homebrew! In terminal paste the following line (without `$`), hit **Enter**, and follow the steps on the screen:
+In terminal paste the following line (without `$`), hit **Enter**, and follow the steps on the screen:
 
     $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 

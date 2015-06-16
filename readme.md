@@ -4,8 +4,9 @@ This document assumes you're running a fresh copy of **OS X Yosemite**.
 
 If you have any comments or suggestions, feel free to give me a shout [on Twitter](https://twitter.com/asuh)!
 
-- [System update](#system-update)
+- [OS X Prepartion](#system-update-and-disk-encryption)
 - [Reset Modifier Keys](#reset-modifier-keys-optional)
+- [Projects Directory](#projects-directory)
 - [Xcode Command Line Tools](#xcode-command-line-tools)
 - [Homebrew](#homebrew)
 - [RVM & Ruby](#rvm-and-ruby)
@@ -25,13 +26,25 @@ If you have any comments or suggestions, feel free to give me a shout [on Twitte
 - [Yeoman, Bower, and Grunt](#yeoman-bower-and-grunt)
 - [Heroku](#heroku)
 - [MongoDB](#mongodb)
-- [Projects folder](#projects-folder)
 - [Apps](#apps)
 
-## System update
+## System update and Disk Encryption
 
 Step One - Update the system!
 **Apple Icon > Software Update**
+
+Step Two - Turn on FileVault
+**Apple Icon > System Preferences > Privacy & Security > FileVault**
+
+Click on the lock to allow you to turn on and enable FileVault. On a brand new machine or OS X installation, it should take around an hour to get this done.
+
+Why do you want [full-disk encryption](https://en.wikipedia.org/wiki/Disk_encryption)? Theft.
+
+You're most likely using a portable laptop of some kind. If you lose it, the laptop gets stolen or someone tries to hack into it, your personal data is at risk. Using full-disk encryption is an extra layer of security to keep your mind at ease in case of potential intrusion.
+
+Two main caveats:
+- Make sure you do not forget your FileVault password. iCloud can also be used as a tool to access the system instead of a password. Losing this password means you've completely lost your data.
+- If OS X gets corrupted and you need to download files from the drive after accessing the drive from an external case, it's not possible. Make sure you're both backing up using [Time Machine](https://support.apple.com/en-us/HT201250) and a cloud backup provider like [iDrive](https://www.idrive.com/) or [Crashplan](https://www.code42.com/crashplan/)
 
 ## Reset Modifier Keys (optional)
 
@@ -43,9 +56,15 @@ Replace your Control Key with the Caps lock key. Caps lock is useless. It's a hu
 
 ## Projects Directory
 
-Create a project directory somewhere on your machine. I like to use ~/Sites and I'll split that into work/personal/temp. If you fire up terminal **(Command + Spacebar -> Type: Terminal -> Enter)** you will be able to run this command to automatically create those directories for you:
+Create a project directory somewhere on your machine. I like to use `~/Sites/project-name`. I prefer my Sites folder to exist along side the rest of my user profile folders.
+
+    $ mkdir -p ~/Sites
+
+(optional) I also split them into work/personal/temp. If you fire up terminal **(Command + Spacebar -> Type: Terminal -> Enter)** you will be able to run this command to automatically create those directories for you:
 
 	$ mkdir -p ~/Sites/{personal,tmp,work}
+
+Other documents I may have, or things not yet under version control, I like to put in `~/Dropbox` (if you have Dropbox installed), or `~/Documents`.
 
 ## Xcode Command Line Tools
 
@@ -441,10 +460,6 @@ In another terminal, connect to the database with the Mongo shell using:
     $ mongo
 
 I'll let you refer to MongoDB's [Getting Started](http://docs.mongodb.org/manual/tutorial/getting-started/) guide for more!
-
-## Projects folder
-
-This really depends on how you want to organize your files, but I like to put all my version-controlled projects in `~/Sites/personal`. Other documents I may have, or things not yet under version control, I like to put in `~/Dropbox` (if you have Dropbox installed), or `~/Documents`.
 
 ## Apps
 

@@ -1,4 +1,4 @@
-# Frontend Development Setup on a Mac
+# Front-End Development Setup on a Mac
 
 This document assumes you're running a fresh copy of **OS X Yosemite**.
 
@@ -14,7 +14,6 @@ If you have any comments or suggestions, feel free to give me a shout [on Twitte
 - [Maximum Awesome](#maximum-awesome)
 - [Sublime Text](#sublime-text)
 - [Vim](#vim)
-- [Slate](#https://github.com/jigish/slate)
 - [VirtualBox](#virtualbox)
 - [Vagrant](#vagrant)
 - [Git](#git)
@@ -147,7 +146,7 @@ Let's test this by installing Google Chrome.
 
 Brew Cask is awesome because now that you understand what it does, you can install all your favorite apps in one command! Here's a list of my favorite apps, including Google Chrome, that I need for development on a regular basis.
 
-    $ brew cask install google-chrome firefox opera github sourcetree imageoptim clamxav vlc filezilla transmission skype virtualbox appcleaner
+    $ brew cask install google-chrome firefox opera github sourcetree imageoptim clamxav vlc filezilla transmission skype virtualbox appcleaner vagrant
 
 ## RVM and Ruby
 
@@ -286,6 +285,32 @@ And finally, install the Vim "sensible defaults" by running:
     $ git clone git://github.com/tpope/vim-sensible.git
 
 With that, Vim will look a lot better next time you open it!
+
+## Virtualbox
+
+The traditional way of setting up a front-end development environment used to be to work through FTP or directly on the server. WordPress installations still promote this workflow to some extent.
+
+The last decade has seen significant changes to the front-end workflow, one of the most important being a local development environment: a local database, a local web server, and back-end language among other things. Using this environment decreases time and increases efficiency for front-end development.
+
+There are several ways to setup a local development environment, whether it's [using the built in (x)AMP stack](http://coolestguidesontheplanet.com/get-apache-mysql-php-phpmyadmin-working-osx-10-9-mavericks/), installing a package like [MAMP](https://www.mamp.info/en/) or [XAMPP](https://www.apachefriends.org/index.html) or using virtual machines like [Parallels](https://www.parallels.com/products/desktop/) or [VMWare Fusion](https://www.vmware.com/products/fusion/).
+
+The free, open-source alternative that I've been enjoying is called [Virtualbox](https://www.virtualbox.org/). This gives you a basic but very capable virtual machine host for any operating system that supports virtual installations.
+
+    $ brew cask install virtualbox
+
+Once installed, you can easily install many [versions of Internet Explorer from the Modern.ie site](http://dev.modern.ie/tools/vms/).
+
+## Vagrant
+
+I have personally tried to move away from MAMP for my dev environment. The alternative I've been enjoying a lot lately is called [Vagrant](https://www.vagrantup.com/). This gives you a powerful way to create a virtual and portable dev environment! It also has built in support talk to your local OS!
+
+    $ brew cask install vagrant
+
+The brilliance of vagrant is its ability to be so portable. When you have a project you work with other developers, creating and destroying the identical dev environment is very simple, reading a local vagrant instruction file. Once created, starting this environment is as simple as typing one command.
+
+    $ vagrant up
+
+My favorite box to use for new projects is called [Scotch Box](https://box.scotch.io/). It is fully-featured and contains everything I need built in to get started with many projects using PHP, JS or Ruby.
 
 ## Git
 
@@ -466,7 +491,6 @@ Here is a quick list of some apps I use, and that you might find useful as well:
 - [Evernote](https://evernote.com/): If I don't write something down, I'll forget it. As a developer, you learn so many new things every day, and technology keeps changing, it would be insane to want to keep it all in your head. So take notes, sync them to the cloud, and have them on all your devices. To be honest, I switched to [Simplenote](http://simplenote.com/) because I only take text notes, and I got tired of Evernote putting extra spaces between paragraphs when I copy & pasted into other applications. Simplenote is so much better for text notes (and it supports Markdown!). **(Both are free)**
 
 ## TODO
-- homebrew cask
 - look over rbenv https://github.com/sstephenson/rbenv
 - enable blackboxing [ manage framework blackboxing on chrome]
 - Allow apps downloaded from anywhere system preferences

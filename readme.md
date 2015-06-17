@@ -145,7 +145,7 @@ Let's test this by installing Google Chrome.
 
 ### Installing multiple applications
 
-Brew Cask is awesome because now that you understand what it does, you can install all your favorite apps in one command! Here's a list of my favorite apps that I need for development on a regular basis.
+Brew Cask is awesome because now that you understand what it does, you can install all your favorite apps in one command! Here's a list of my favorite apps, including Google Chrome, that I need for development on a regular basis.
 
     $ brew cask install google-chrome firefox opera github sourcetree imageoptim clamxav vlc filezilla transmission skype virtualbox appcleaner
 

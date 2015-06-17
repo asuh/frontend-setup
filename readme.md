@@ -11,14 +11,13 @@ If you have any comments or suggestions, feel free to give me a shout [on Twitte
 - [Homebrew](#homebrew)
 - [Homebrew Cask](#homebrew-cask)
 - [RVM & Ruby](#rvm-and-ruby)
-- [Maximum Awesome](#maximum-awesome)
+- [Sass](#sass)
 - [Sublime Text](#sublime-text)
 - [Vim](#vim)
 - [VirtualBox](#virtualbox)
 - [Vagrant](#vagrant)
 - [Git](#git)
 - [Node.js](#nodejs)
-- [Sass](#sass)
 - [Yeoman, Bower, and Grunt](#yeoman-bower-and-grunt)
 - [Heroku](#heroku)
 - [MongoDB](#mongodb)
@@ -189,22 +188,6 @@ You should get `Rails 4.2.0` or higher.
 Install your preprocessor of choice, but I highly recommend using Sass. They all do the same thing but Sass has the most momentum behind it right now.
 
     $ sudo gem install sass
-
-## SoundCleod
-https://github.com/salomvary/soundcleod
-
-##Maximum Awesome
-
-I originally intended to write my own build script for a lot of this, but Maximum Awesome already does a fantastic job installing iTerm2, Tmux, MacVim and a plethora of other great features!
-
-[https://github.com/square/maximum-awesome](https://github.com/square/maximum-awesome)
-
-	$ cd ~/Sites/tmp
-	$ git clone https://github.com/square/maximum-awesome && cd maximum-awesome
-	$ rake
-
-![Maximum Awesome](http://corner.squareup.com/images/maximum-awesome/vim.png)
-
 
 ## Sublime Text
 
@@ -489,6 +472,8 @@ Here is a quick list of some apps I use, and that you might find useful as well:
 - [Mou](http://markedapp.com/): As a developer, most of the stuff you write ends up being in [Markdown](http://daringfireball.net/projects/markdown/). In fact, this `README.md` file (possibly the most important file of a GitHub repo) is indeed in Markdown, written in Sublime Text, and I use Marked to preview the results everytime I save. **(FREE)**
 - [Alfred](http://www.alfredapp.com/): If you find Yosemite's Spotlight to be limited in functionality, try Alfred. It has a healthy community and lots of plugins.
 - [Evernote](https://evernote.com/): If I don't write something down, I'll forget it. As a developer, you learn so many new things every day, and technology keeps changing, it would be insane to want to keep it all in your head. So take notes, sync them to the cloud, and have them on all your devices. To be honest, I switched to [Simplenote](http://simplenote.com/) because I only take text notes, and I got tired of Evernote putting extra spaces between paragraphs when I copy & pasted into other applications. Simplenote is so much better for text notes (and it supports Markdown!). **(Both are free)**
+- [SoundCleod](https://github.com/salomvary/soundcleod): Standalone app to play Soundcloud audio/music. Because why not?
+- [Maximum Awesome](https://github.com/square/maximum-awesome): I originally intended to write my own build script for a lot of this, but Maximum Awesome already does a fantastic job installing iTerm2, Tmux, MacVim and a plethora of other great features!
 
 ## TODO
 - look over rbenv https://github.com/sstephenson/rbenv

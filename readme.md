@@ -9,11 +9,8 @@ If you have any comments or suggestions, feel free to give me a shout [on Twitte
 - [Projects Directory](#projects-directory)
 - [Xcode Command Line Tools](#xcode-command-line-tools)
 - [Homebrew](#homebrew)
-- [RVM & Ruby](#rvm-and-ruby)
 - [Homebrew Cask](#homebrew-cask)
-- [Google Chrome](#google-chrome)
-- [Google Chrome Canary](#google-chrome-canary)
-- [Firefox](#firefox)
+- [RVM & Ruby](#rvm-and-ruby)
 - [Maximum Awesome](#maximum-awesome)
 - [Sublime Text](#sublime-text)
 - [Vim](#vim)
@@ -134,6 +131,24 @@ To see what you have installed (with their version numbers):
 
     $ brew list --versions
 
+## Homebrew Cask
+
+Homebrew Cask extends Homebrew to let you install OS X applications and large binaries alike. Use it to install browsers and editors!
+
+    brew install caskroom/cask/brew-cask
+
+### [Google Chrome](http://google.com/chrome)
+
+Let's test this by installing Google Chrome.
+
+    $ brew cask install google-chrome
+
+### Installing multiple applications
+
+Brew Cask is awesome because now that you understand what it does, you can install all your favorite apps in one command! Here's a list of my favorite apps that I need for development on a regular basis.
+
+    $ brew cask install google-chrome firefox opera github sourcetree imageoptim clamxav vlc filezilla transmission skype virtualbox appcleaner
+
 ## RVM and Ruby
 
 Ruby does come pre-installed on Mac, but you probably shouldn't be tinkering around with that version. It's best to install a ruby version manager to take care of anything that one might screw up messing around with your system's version of Ruby.
@@ -175,25 +190,6 @@ You should get `Rails 4.2.0` or higher.
 Install your preprocessor of choice, but I highly recommend using Sass. They all do the same thing but Sass has the most momentum behind it right now.
 
     $ sudo gem install sass
-
-## Homebrew Cask
-
-Homebrew Cask extends Homebrew to let you install OS X applications and large binaries alike. Use it to install browsers and editors!
-
-    brew install caskroom/cask/brew-cask
-
-### [Google Chrome](http://google.com/chrome)
-
-    $ brew cask install google-chrome
-
-### [Google Chrome Canary](https://www.google.com/chrome/browser/canary.html)
-
-    $ brew cask install google-chrome-canary
-
-### [Firefox](https://www.mozilla.org/en-US/firefox/new/)
-
-    $ brew cask install firefox
-
 
 ## SoundCleod
 https://github.com/salomvary/soundcleod

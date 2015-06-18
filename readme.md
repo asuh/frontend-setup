@@ -205,10 +205,6 @@ Sublime Text is not free, but I think it has an unlimited "evaluation period". A
 
 The first thing you do after installing Sublime is to [install Package Control](https://packagecontrol.io/installation). This is the most important addition you'll make to Sublime Text and it'll give you the power to install plugins, add-ons, themes, color schemes and everything in between.
 
-Let's configure our editor a little. Go to **Sublime Text > Preferences > Settings - User** and paste this code from [my Preferences.sublime-settings file](https://gist.github.com/asuh/67586e056eba7757330f).
-
-Feel free to tweak these to your taste. When done, save the file and close it.
-
 Now for the color. I'm going to change two things: 
 - **Theme** (which is how the tabs, the file explorer on the left, etc. look)
 - **Color Scheme** (the colors of the code). 
@@ -220,9 +216,13 @@ A popular Theme is the [Seti_UI Theme](https://packagecontrol.io/packages/Seti_U
 Then go to **Sublime Text > Preferences > Settings - User** and add the following two lines:
 
     "theme": "Seti.sublime-theme",
-    "color_scheme": "Packages/User/Color Highlighter/themes/Seti.tmTheme",
+    "color_scheme": "Packages/Seti_UI/Scheme/Seti.tmTheme",
 
 Restart Sublime Text for all changes to take affect (Note: on the Mac, closing all windows doesn't close the application, you need to hit **Cmd+Q**).
+
+Let's configure our editor a little. Go to **Sublime Text > Preferences > Settings - User** and paste this code from [my Preferences.sublime-settings file](https://gist.github.com/asuh/67586e056eba7757330f).
+
+Feel free to tweak these to your taste. When done, save the file and close it.
 
 Let's create a shortcut so we can launch Sublime Text from the command-line:
 

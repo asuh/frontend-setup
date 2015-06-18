@@ -195,40 +195,34 @@ With the terminal, the text editor is a developer's most important tool. Everyon
 
     $ brew cask install sublime-text
 
-Go ahead and [download](http://www.sublimetext.com/) it. Open the **.dmg** file, drag-and-drop in the **Applications** folder, you know the drill now. Launch the application.
+This installs I prefer using the [beta version of Sublime Text 3](https://sublimetext.com/3) which is usually just as stable as version 2.
+
+To install beta manually, [download](http://www.sublimetext.com/3) it, open the **.dmg** file, drag-and-drop in the **Applications** folder, you know the drill now. Launch the application.
 
 **Note**: At this point I'm going to create a shortcut on the OS X Dock for both for Sublime Text and iTerm. To do so, right-click on the running application and select **Options > Keep in Dock**.
 
 Sublime Text is not free, but I think it has an unlimited "evaluation period". Anyhow, we're going to be using it so much that even the seemingly expensive $70 price tag is worth every penny. If you can afford it, I suggest you [support](http://www.sublimetext.com/buy) this awesome tool. :)
 
-Just like the terminal, let's configure our editor a little. Go to **Sublime Text 2 > Preferences > Settings - User** and paste this code from [my Preferences.sublime-settings file](https://gist.github.com/asuh/67586e056eba7757330f).
+The first thing you do after installing Sublime is to [install Package Control](https://packagecontrol.io/installation). This is the most important addition you'll make to Sublime Text and it'll give you the power to install plugins, add-ons, themes, color schemes and everything in between.
 
-Feel free to tweak these to your preference. When done, save the file and close it.
+Let's configure our editor a little. Go to **Sublime Text > Preferences > Settings - User** and paste this code from [my Preferences.sublime-settings file](https://gist.github.com/asuh/67586e056eba7757330f).
 
-Now for the color. I'm going to change two things: the **Theme** (which is how the tabs, the file explorer on the left, etc. look) and the **Color Scheme** (the colors of the code). Again, feel free to pick different ones, or stick with the default.
+Feel free to tweak these to your taste. When done, save the file and close it.
 
-A popular Theme is the [Soda Theme](https://github.com/buymeasoda/soda-theme). To install it, run:
+Now for the color. I'm going to change two things: 
+- **Theme** (which is how the tabs, the file explorer on the left, etc. look)
+- **Color Scheme** (the colors of the code). 
 
-    $ cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/
-    $ git clone https://github.com/buymeasoda/soda-theme/ "Theme - Soda"
+Again, feel free to pick different ones or stick with the default.
 
-Then go to **Sublime Text 2 > Preferences > Settings - User** and add the following two lines:
+A popular Theme is the [Seti_UI Theme](https://packagecontrol.io/packages/Seti_UI). Go to **Tools > Command Palette** (Shift-Command-P), Highlight **Package Control: Install Package** and then search for Seti_UI, make sure it's highlighted then press Enter to install it.
 
-    "theme": "Soda Dark.sublime-theme",
-    "soda_classic_tabs": true
+Then go to **Sublime Text > Preferences > Settings - User** and add the following two lines:
+
+    "theme": "Seti.sublime-theme",
+    "color_scheme": "Packages/User/Color Highlighter/themes/Seti.tmTheme",
 
 Restart Sublime Text for all changes to take affect (Note: on the Mac, closing all windows doesn't close the application, you need to hit **Cmd+Q**).
-
-The Soda Theme page also offers some [extra color schemes](https://github.com/buymeasoda/soda-theme#syntax-highlighting-colour-schemes) you can download and try. But to be consistent with my terminal, I like to use the **Solarized** Color Scheme, which already ships with Sublime Text. To use it, just go to **Sublime Text 2 > Preferences > Color Scheme > Solarized (Dark)**. Again, this is really according to personal flavors, so pick what you want.
-
-Sublime Text 2 already supports syntax highlighting for a lot of languages. I'm going to install a couple that are missing:
-
-    $ cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/
-    $ git clone https://github.com/jashkenas/coffee-script-tmbundle CoffeeScript
-    $ git clone https://github.com/miksago/jade-tmbundle Jade
-    $ git clone https://github.com/danro/LESS-sublime.git LESS
-    $ git clone -b SublimeText2 https://github.com/kuroir/SCSS.tmbundle.git SCSS
-    $ git clone https://github.com/nrw/sublime-text-handlebars Handlebars
 
 Let's create a shortcut so we can launch Sublime Text from the command-line:
 
@@ -238,7 +232,7 @@ Let's create a shortcut so we can launch Sublime Text from the command-line:
 
 Now I can open a file with `$ subl myfile.py` or start a new project in the current directory with `$ subl .`. Pretty cool.
 
-Sublime Text is very extensible. For now we'll leave it like that, we already have a solid installation. To add more in the future, a good place to start would be to install the [Sublime Package Control](http://wbond.net/sublime_packages/package_control/installation).
+Sublime Text is very extensible. For now we'll leave it like that, we already have a solid installation.
 
 ## Vim
 

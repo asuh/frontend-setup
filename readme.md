@@ -18,7 +18,9 @@ If you have any comments or suggestions, feel free to give me a shout [on Twitte
 - [Vagrant](#vagrant)
 - [Git](#git)
 - [Node.js](#nodejs)
-- [Yeoman, Bower, and Grunt](#yeoman-bower-and-grunt)
+- [Preprocessors and Postprocessors](#preprocessors-and-postprocessors)
+- [Yeoman](#yeoman)
+- [ES6](es6)
 - [Heroku](#heroku)
 - [MongoDB](#mongodb)
 - [Apps](#apps)
@@ -377,7 +379,7 @@ To uninstall a package:
 
     $ npm uninstall <package>
 
-### Preprocessor and Postprocessor
+### Preprocessors and Postprocessors
 
 Previously, I had you install Sass. In case you're not a fan of Sass or prefer another type of processor, here are
 
@@ -389,9 +391,23 @@ CSS Next is the future wave of CSS processing, allowing you to write cutting edg
 
     $ npm install cssnext
 
-### Yeoman, Bower, and Grunt
+### Yeoman
 
-    $npm install yeoman
+If you intend to use a modern Javascript MVC framework and need a quick way to scaffold out a base framework, [Yeoman](http://yeoman.io/) was built specifically for this purpose. It contains generators for all the most popular frameworks and tools. 
+
+    $npm install yo
+
+### ES6
+
+The time has come for you to start learning the newest version of Javascript, ECMAScript 6 (ES6). Where we needed jQuery previously, it is not the golden standard it once was. Browser quirks are decreasing because web standards are regularly implemented and iterated. Thus, the golden age of Javascript is upon us.
+
+As of June 2015, ES6 is ratified as the newest JS version. There is no command needed to install it, but until browsers catch up implementing the newest features, it is recommended to use a transpiler to convert your ES6 back to ES5, which is universally supported in all modern browsers.
+
+The most popular transpiler is Babel(https://babeljs.io/).
+
+    $ npm install -g babel
+
+Pairing this with a build system will give you the ability to write today's scripting language without worrying about incompatibilities. Check out [Babel's tools](https://babeljs.io/docs/setup/) to build your custom stack.
 
 ## Heroku
 

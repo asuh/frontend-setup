@@ -20,7 +20,7 @@ If you have any comments or suggestions, feel free to give me a shout [on Twitte
 - [Node.js](#nodejs)
 - [Preprocessors and Postprocessors](#preprocessors-and-postprocessors)
 - [Yeoman](#yeoman)
-- [ES6](es6)
+- [ES6](#es6)
 - [Heroku](#heroku)
 - [MongoDB](#mongodb)
 - [Apps](#apps)

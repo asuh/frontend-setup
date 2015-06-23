@@ -23,6 +23,7 @@ If you have any comments or suggestions, feel free to give me a shout [on Twitte
 - [ES6](#es6)
 - [Heroku](#heroku)
 - [MongoDB](#mongodb)
+- [Composer](#composer)
 - [Apps](#apps)
 
 ## System update and Disk Encryption
@@ -474,6 +475,19 @@ In another terminal, connect to the database with the Mongo shell using:
     $ mongo
 
 I'll let you refer to MongoDB's [Getting Started](http://docs.mongodb.org/manual/tutorial/getting-started/) guide for more!
+
+## Composer
+
+Because so many people use PHP in their day to day work, we need a way to manage PHP scripts and packages similarly to how we manage JS dependencies using NPM and Bower.
+
+One of the most popular PHP dependency managers is called [Composer](https://getcomposer.org/). The difference between Composer and NPM, for example, is that Composer works on a project-by-project basis, there is no global installations. So you must run and setup Composer on every new project if you want to use it.
+
+To install Composer globally, let's go back to Terminal and [use the following two commands](https://getcomposer.org/doc/00-intro.md#globally):
+
+    $ curl -sS https://getcomposer.org/installer | php
+    $ mv composer.phar /usr/local/bin/composer
+
+What this does is downloads a file called `composer.phar` and then moves it to the same global directory that other package managers live so that you can use it in any directory on OS X.
 
 ## Apps
 

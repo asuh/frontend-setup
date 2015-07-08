@@ -11,6 +11,7 @@ If you have any comments or suggestions, feel free to give me a shout [on Twitte
 - [Homebrew](#homebrew)
 - [Homebrew Cask](#homebrew-cask)
 - [RVM & Ruby](#rvm-and-ruby)
+- [ZSH](#zsh)
 - [Sass](#sass)
 - [Sublime Text](#sublime-text)
 - [Vim](#vim)
@@ -186,6 +187,18 @@ You should get `ruby 2.2.0` or higher.
 
 You should get `Rails 4.2.0` or higher.
 
+## ZSH
+
+By default, Terminal is using Bash Unix shell. Bash contains the command language used to interact with Unix functions, such as `pwd`, `ls`, and `cd`.
+
+[Z Shell](https://en.wikipedia.org/wiki/Z_shell), or ZSH, was written to extend Bash and make improvements to how Bash works. One of the most popular frameworks written around ZSH is called [Oh My Zsh!](http://ohmyz.sh/).
+
+Install it with the following command:
+
+    $ curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+
+Now you have ZSH installed. [Sign up and follow the videos recorded by Wes Bos](http://commandlinepoweruser.com/) to learn a ton more about ZSH and why it's so powerful.
+
 ## Sass
 
 Install your preprocessor of choice, but I highly recommend using Sass. They all do the same thing but Sass has the most momentum behind it right now.
@@ -208,9 +221,9 @@ Sublime Text is not free, but I think it has an unlimited "evaluation period". A
 
 The first thing you do after installing Sublime is to [install Package Control](https://packagecontrol.io/installation). This is the most important addition you'll make to Sublime Text and it'll give you the power to install plugins, add-ons, themes, color schemes and everything in between.
 
-Now for the color. I'm going to change two things: 
+Now for the color. I'm going to change two things:
 - **Theme** (which is how the tabs, the file explorer on the left, etc. look)
-- **Color Scheme** (the colors of the code). 
+- **Color Scheme** (the colors of the code).
 
 Again, feel free to pick different ones or stick with the default.
 
@@ -394,7 +407,7 @@ CSS Next is the future wave of CSS processing, allowing you to write cutting edg
 
 ### Yeoman
 
-If you intend to use a modern Javascript MVC framework and need a quick way to scaffold out a base framework, [Yeoman](http://yeoman.io/) was built specifically for this purpose. It contains generators for all the most popular frameworks and tools. 
+If you intend to use a modern Javascript MVC framework and need a quick way to scaffold out a base framework, [Yeoman](http://yeoman.io/) was built specifically for this purpose. It contains generators for all the most popular frameworks and tools.
 
     $npm install yo
 

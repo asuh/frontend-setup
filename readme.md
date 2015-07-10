@@ -8,10 +8,10 @@ If you have any comments or suggestions, feel free to give me a shout [on Twitte
 - [Reset Modifier Keys](#reset-modifier-keys-optional)
 - [Projects Directory](#projects-directory)
 - [Xcode Command Line Tools](#xcode-command-line-tools)
+- [ZSH](#zsh)
 - [Homebrew](#homebrew)
 - [Homebrew Cask](#homebrew-cask)
 - [RVM & Ruby](#rvm-and-ruby)
-- [ZSH](#zsh)
 - [Sass](#sass)
 - [Sublime Text](#sublime-text)
 - [Vim](#vim)
@@ -78,6 +78,18 @@ Using Terminal, install the Xcode Command Line Tools:
 For older OSes, go to [http://developer.apple.com/downloads](http://developer.apple.com/downloads), and sign in with your Apple ID (the same one you use for iTunes and app purchases).
 
 Once you reach the downloads page, search for "command line tools", and download **Command Line Tools for Xcode**. Open the **.dmg** file once it's done downloading, and double-click on the **.mpkg** installer to launch the installation. When it's done, you can unmount the disk in Finder.
+
+## ZSH (optional)
+
+By default, Terminal is using Bash Unix shell. Bash contains the command language used to interact with Unix functions, such as `pwd`, `ls`, and `cd`.
+
+[Z Shell](https://en.wikipedia.org/wiki/Z_shell), or ZSH, was written to extend Bash and make improvements to how Bash works. One of the most popular frameworks written around ZSH is called [Oh My Zsh!](http://ohmyz.sh/).
+
+Install it with the following command:
+
+    $ curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+
+Now you have ZSH installed. [Sign up and follow the videos recorded by Wes Bos](http://commandlinepoweruser.com/) to learn a ton more about ZSH and why it's so powerful.
 
 ## Homebrew
 
@@ -187,17 +199,23 @@ You should get `ruby 2.2.0` or higher.
 
 You should get `Rails 4.2.0` or higher.
 
-## ZSH
+### RVM and ZSH
 
-By default, Terminal is using Bash Unix shell. Bash contains the command language used to interact with Unix functions, such as `pwd`, `ls`, and `cd`.
+If you previously installed ZSH, Terminal might throw the following error at the top of any new Terminal session:
 
-[Z Shell](https://en.wikipedia.org/wiki/Z_shell), or ZSH, was written to extend Bash and make improvements to how Bash works. One of the most popular frameworks written around ZSH is called [Oh My Zsh!](http://ohmyz.sh/).
+    Warning: PATH set to RVM ruby but GEM_HOME and/or GEM_PATH not set, see:
+    https://github.com/wayneeseguin/rvm/issues/3212
 
-Install it with the following command:
+To [resolve this issue](https://stackoverflow.com/questions/27784961/received-warning-message-path-set-to-rvm-after-updating-ruby-version-using-rvm), open the .zshrc file and change the follow path from:
 
-    $ curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+    export PATH="/path/to/something"
 
-Now you have ZSH installed. [Sign up and follow the videos recorded by Wes Bos](http://commandlinepoweruser.com/) to learn a ton more about ZSH and why it's so powerful.
+to
+
+    export PATH="$PATH:/path/to/something"
+
+If your export `PATH` has no quotations, it will still work correctly just by entering `$PATH:` into the export `PATH`.
+
 
 ## Sass
 

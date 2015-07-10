@@ -8,7 +8,7 @@ If you have any comments or suggestions, feel free to give me a shout [on Twitte
 - [Reset Modifier Keys](#reset-modifier-keys-optional)
 - [Projects Directory](#projects-directory)
 - [Xcode Command Line Tools](#xcode-command-line-tools)
-- [ZSH](#zsh)
+- [ZSH](#zsh-optional)
 - [Homebrew](#homebrew)
 - [Homebrew Cask](#homebrew-cask)
 - [RVM & Ruby](#rvm-and-ruby)

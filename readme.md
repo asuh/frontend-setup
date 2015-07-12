@@ -30,7 +30,7 @@ If you have any comments or suggestions, feel free to give me a shout [on Twitte
 ## System update and Disk Encryption
 
 Step One - Update the system!
-**Apple Icon > Software Update**
+**Apple Icon > App Store > Updates**
 
 Step Two - Turn on FileVault
 **Apple Icon > System Preferences > Privacy & Security > FileVault**

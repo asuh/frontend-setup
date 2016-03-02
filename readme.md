@@ -235,7 +235,7 @@ With the terminal, the text editor is a developer's most important tool. Everyon
 
     $ brew cask install sublime-text
 
-This installs I prefer using the [beta version of Sublime Text 3](https://sublimetext.com/3) which is usually just as stable as version 2.
+I prefer using the [beta version of Sublime Text 3](https://sublimetext.com/3) which is usually just as stable as version 2.
 
 To install beta manually, [download](http://www.sublimetext.com/3) it, open the **.dmg** file, drag-and-drop in the **Applications** folder, you know the drill now. Launch the application.
 

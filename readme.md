@@ -183,7 +183,7 @@ In rare cases that you need to reopen multiple shell windows, you need to run th
 
     $ source /Users/{username}/.rvm/script/rvm
 
-Replace `{yourusername}` with your computer's user name which can be found right in your Terminal's prompt.
+Replace `{username}` with your computer's user name which can be found right in your Terminal's prompt.
 
 After it's done, quit and relaunch Terminal, then run this command:
 

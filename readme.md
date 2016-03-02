@@ -179,6 +179,12 @@ Installing RVM, Ruby and Rails can be done with just one command! If you don't p
 
 For more installation options, see the [RVM documentation](https://github.com/wayneeseguin/rvm#installation).
 
+In rare cases that you need to reopen multiple shell windows, you need to run the following command in all your open shell windows:
+
+    $ source /Users/{username}/.rvm/script/rvm
+
+Replace {yourusername} with your computer's user name which can be found right in your Terminal's prompt.
+
 After it's done, quit and relaunch Terminal, then run this command:
 
     $ rvm | head -1
@@ -189,15 +195,15 @@ To make sure the latest versions of RVM, Ruby and Rails were installed, run the 
 
     $ rvm -v
 
-You should get `rvm 1.26.10` or higher.
+You should get `rvm 1.26.11` or higher.
 
     $ ruby -v
 
-You should get `ruby 2.2.0` or higher.
+You should get `ruby 2.2.1` or higher.
 
     $ rails -v
 
-You should get `Rails 4.2.0` or higher.
+You should get `Rails 4.2.5.2` or higher.
 
 ### RVM and ZSH
 

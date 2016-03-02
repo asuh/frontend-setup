@@ -1,6 +1,6 @@
 # Front-End Development Setup on a Mac
 
-This document assumes you're running a fresh copy of **OS X Yosemite**.
+This document assumes you're running a fresh copy of **OS X Yosemite or El Capitan**.
 
 If you have any comments or suggestions, feel free to give me a shout [on Twitter](https://twitter.com/asuh)!
 

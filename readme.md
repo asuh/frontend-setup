@@ -42,7 +42,7 @@ Why do you want [full-disk encryption](https://en.wikipedia.org/wiki/Disk_encryp
 You're most likely using a portable laptop of some kind. If you lose it, the laptop gets stolen or someone tries to hack into it, your personal data is at risk. Using full-disk encryption is an extra layer of security to keep your mind at ease in case of potential intrusion.
 
 Two main caveats:
-- Make sure you do not forget your FileVault password. iCloud can also be used as a tool to access the system instead of a password. Losing this password means you've completely lost your data.
+- Make sure you do not forget your FileVault password. iCloud can also be used as a tool to access the system instead of a password. Losing this password means you cannot log in and everything on your computer is 100% inaccessible.
 - If OS X gets corrupted and you need to download files from the drive after accessing the drive from an external case, it's not possible. Make sure you're both backing up using [Time Machine](https://support.apple.com/en-us/HT201250) and a cloud backup provider like [iDrive](https://www.idrive.com/) or [Crashplan](https://www.code42.com/crashplan/)
 
 ## Reset Modifier Keys (optional)
